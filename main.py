@@ -16,8 +16,7 @@ def my_form():
 def my_form_post():
     text = request.form['fname']
     listofanagrams = anagram(text)
-    return render_template("templates/anagrammi.html", data=listofanagrams)
-    
+    render_template("templates/anagrammi.html", data=listofanagrams)
 
-if __name__ == "__main__":    
+if __name__ == "__main__":
     app.run(debug=True)
